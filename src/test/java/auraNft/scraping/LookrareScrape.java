@@ -37,7 +37,7 @@ public class LookrareScrape {
         driver.get("https://looksrare.org/");
         driver.manage().window().maximize();
         Thread.sleep(10000);
-        File outputFile = new File("/Users/durgaaura/eclipse-workspace/Auranft/link.txt");
+        File outputFile = new File("/Users/durgaaura/eclipse-workspace/Auranft/link1.txt");
         FileOutputStream fileOutputStream = new FileOutputStream(outputFile);
         PrintStream printStream = new PrintStream(fileOutputStream);
         System.setOut(printStream);
@@ -56,7 +56,7 @@ public class LookrareScrape {
 	            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='css-1vowvxp']//div[contains(text(),'Collections')]")));
                 WebElement collection =driver.findElement(By.xpath("//div[@class='css-1vowvxp']//div[contains(text(),'Collections')]"));
                 String collectionText = collection.getText();
-                System.out.println(collectionText);
+                //System.out.println(collectionText);
                 
                 if (collectionText.contains("Collections")) {
     	           WebElement colletionLink = driver.findElement(By.xpath("//div[@data-test-id='collection-desktop-results-stack']//div[1]//div[1]//a[1]"));
