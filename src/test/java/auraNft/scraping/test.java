@@ -48,14 +48,8 @@ public class test {
         Thread.sleep(10000);
         driver.findElement(By.xpath("//li[@title='Next 5 Pages']")).click();
         Thread.sleep(10000);
-        driver.findElement(By.xpath("//li[@title='Next 5 Pages']")).click();
+        driver.findElement(By.xpath("//li[@title='10']")).click();
         Thread.sleep(10000);
-        driver.findElement(By.xpath("//li[@title='Next 5 Pages']")).click();
-        Thread.sleep(10000);
-        driver.findElement(By.xpath("//li[@title='Next 5 Pages']")).click();
-        Thread.sleep(10000);
-        driver.findElement(By.xpath("//li[@title='24']")).click();
-        Thread.sleep(15000);
         scrapeAttendees(44);
         
         
@@ -74,7 +68,7 @@ public class test {
 
     public static void scrapeAttendees(int pageCount) {
     	for (int page = 0; page < pageCount; page++) {
-        List<WebElement> links = driver.findElements(By.xpath("//div[@class='css-6viwen e4uvspw5']//div//div//div//button[1][@data-test='attendee-card-meeting-button']"));
+        List<WebElement> links = driver.findElements(By.xpath("//div[@class='css-6viwen e4uvspw5']//div//div//div//button[1]"));
         
         for(int i = 0; i < links.size(); i++)  {
         	WebElement link = links.get(i);

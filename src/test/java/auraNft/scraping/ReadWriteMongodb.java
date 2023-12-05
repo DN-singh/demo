@@ -36,7 +36,7 @@ public class ReadWriteMongodb {
         MongoDatabase database = mongoClient.getDatabase("your_database_name"); 
         MongoCollection<Document> collection = database.getCollection("your_collection_name"); 
         
-       List<String> values = readValueFromFile(collection);
+        List<String> values = readValueFromFile(collection);
 
 
         for (String value : values) {
